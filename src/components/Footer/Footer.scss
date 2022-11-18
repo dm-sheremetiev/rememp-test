@@ -1,0 +1,162 @@
+@import '../../helpers/mixins';
+
+.footer {
+  background: #64abf9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__signature {
+    margin-top: 120px;
+    margin-bottom: 80px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 175%;
+    color: #fff;
+
+    @include onMobile {
+      text-align: center;
+    }
+    @include onTablet {
+      text-align: none;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1170px;
+    position: relative;
+  }
+}
+
+.footer-info {
+  display: flex;
+
+  @include onMobile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include onTablet {
+    flex-direction: row;
+    padding: 0 18px;
+    align-items: none;
+    justify-content: none;
+  }
+  @include onDesktop {
+    padding: 0;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    margin-right: 126px;
+
+    @include onMobile {
+      margin-right: 0;
+    }
+  
+    @include onTablet {
+      margin-right: 126px;
+    }
+  }
+
+  &__sales {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__hr {
+    margin-top: 120px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+
+    @include onMobile {
+      align-self: flex-start;
+      margin-left: 79px;
+    }
+
+    @include onTablet {
+      align-self: center;
+      margin-left: 80px;
+    }
+    @include onDesktop {
+      margin-left: 107px;
+    }
+  }
+
+  &__saler {
+    display: flex;
+    margin-bottom: 15px;
+    text-decoration: none;
+
+    &:first-child {
+      margin-top: 126px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include onMobile {
+      &:first-child {
+        margin-top: 28px;
+      }
+    }
+  
+    @include onTablet {
+      &:first-child {
+        margin-top: 126px;
+      }
+    }
+
+    &--text {
+      margin-left: 10px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #fff;
+    }
+  }
+
+  &__logo {
+    margin-top: 101px;
+
+    width: 280px;
+    height: 66px;
+
+    
+  }
+
+  &__networks {
+    margin-top: 45px;
+    display: flex;
+
+    @include onMobile {
+      position: absolute;
+      top: 362px;
+      
+      margin-top: 0;
+    }
+    @include onTablet {
+      position: relative;
+      top: 0;
+      display: flex;
+      margin-top: 45px;
+    }
+
+    &--image {
+      text-decoration: none;
+      margin-right: 39px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

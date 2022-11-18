@@ -1,0 +1,111 @@
+@import '../../helpers/mixins';
+
+.option {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 15px;
+  padding: 18px 41px 19px 44px;
+
+  @include onMobile {
+    max-height: 91px;
+  }
+  @include onTablet {
+    max-height: 61px;
+  }
+
+  &--is-opened {
+    height: auto;
+    overflow: visible;
+  }
+
+  &:first-child {
+    margin-top: 65px;
+  }
+
+  &:last-child {
+    @include onMobile {
+      margin-bottom: 30px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover>.option__arrow {
+      transform: scale(1.2);
+    }
+
+    &--left-side {
+      display: flex;
+      align-items: center;
+    }
+
+    &__circle {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    transition: all 0.3s;
+    font-weight: 400;
+    line-height: 175%;
+    color: #111;
+    margin-left: 28px;
+
+    @include onMobile {
+      font-size: 17px;
+    }
+
+    @include onDesktop {
+      font-size: 18px;
+    }
+
+    &--in-dropdown {
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 125%;
+    }
+  }
+
+  &__arrow {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+  }
+}
+
+.dropdown {
+  transition: all 1s;
+  &--is-hidden {
+    opacity: 0;
+  }
+
+  &__text {
+    margin-top: 41px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 175%;
+    color: #000;
+    position: relative;
+    margin-left: 51px;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      border-left: 1px solid #000;
+      left: -40px;
+    }
+  }
+}

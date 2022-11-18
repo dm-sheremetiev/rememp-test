@@ -1,0 +1,71 @@
+@import '../../helpers/mixins';
+
+.slider-option {
+  width: 100%;
+  margin-right: 25px;
+  border: 2px solid #67aefc;
+  border-radius: 15px;
+  background-color: transparent;
+  padding-left: 70px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  display: flex;
+  align-items: center;
+
+  @include onMobile {
+    min-width: 100%;
+    padding-top: 27px;
+    padding-right: 29px;
+    padding-left: 33px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include onTablet {
+    min-width: auto;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 70px;
+  }
+
+  @include onTablet {
+    flex-direction: row;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    @include onMobile {
+      align-self: flex-start;
+    }
+
+    @include onTablet {
+      align-self: none;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 21px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 125%;
+    color: #000;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000;
+  }
+}

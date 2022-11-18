@@ -1,0 +1,211 @@
+@import "../../helpers/mixins";
+
+.header {
+  background-color: #67aefc;
+  display: flex;
+  justify-content: center;
+
+  &__logo {
+    
+    @include onMobile {
+      width: 136px;
+      height: 35px;
+    }
+    
+    @include onTablet {
+      width: 242px;
+      height: 59px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include onMobile {
+      padding: 9px 16px;
+    }
+
+    @include onTablet {
+      padding: 18px 12px;
+      max-width: 900px;
+    }
+
+    @include onDesktop {
+      padding: 18px 0;
+      max-width: 1170px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  @include onMobile {
+    display: none;
+  }
+
+  @include onTablet {
+    gap: 15px;
+    display: flex;
+  }
+
+  @include onDesktop {
+    gap: 30px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+
+    @include onTablet {
+      gap: 10px;
+    }
+
+    @include onDesktop {
+      gap: 37px;
+    }
+  }
+
+  &__item {
+    font-weight: 600;
+    line-height: 20px;
+    color: #fff;
+    text-decoration: none;
+
+    @include onTablet {
+      font-size: 14px;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+    }
+  }
+}
+
+.order-button {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  background: #75e169;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @include onTablet {
+    padding: 5px 22px;
+  }
+
+  @include onDesktop {
+    padding: 10px 42px;
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 42px;
+    background: #75e169;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include onMobile {
+      display: none;
+    }
+
+    @include onTablet {
+      padding: 5px 22px;
+      display: flex;
+    }
+
+    @include onDesktop {
+      padding: 10px 42px;
+    }
+
+    &:hover {
+      border: 2px solid #fff;
+    }
+
+    &:active {
+      color: #67aefc;
+      background: #fff;
+      border: 2px solid #fff;
+    }
+  }
+
+  &:hover {
+    border: 2px solid #67aefc;
+  }
+
+  &:active {
+    color: #fff;
+    background: #67aefc;
+  }
+
+  &--head-info {
+    width: 270px;
+    height: 60px;
+    margin-bottom: 180px;
+
+    @include onMobile {
+      width: 100%;
+      margin-bottom: 51px;
+    }
+
+    @include onTablet {
+      width: 270px;
+      height: 60px;
+      margin-bottom: 180px;
+    }
+  }
+
+  &--more-info {
+    text-transform: uppercase;
+    width: 270px;
+    height: 60px;
+    margin-top: 45px;
+    margin-bottom: 180px;
+
+    @include onMobile {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include onTablet {
+      width: 270px;
+      margin-bottom: 180px;
+    }
+  }
+
+  &--submit {
+    width: 270px;
+    height: 60px;
+    background-color: #6bd75f;
+    margin-top: 30px;
+    margin-bottom: 128px;
+
+    @include onMobile {
+      width: 100%;
+      margin-bottom: 42px;
+    }
+    @include onTablet {
+      width: 270px;
+    }
+  }
+}

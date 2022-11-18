@@ -1,0 +1,736 @@
+@import '../../helpers/mixins';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  &__callback {
+    display: flex;
+    justify-content: center;
+    background-color: #daecff;
+    width: 100%;
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
+
+    @include onMobile {
+      padding: 0 18px;
+    }
+
+    @include onTablet {
+      max-width: 900px;
+      padding: 0 18px;
+    }
+
+    @include onDesktop {
+      max-width: 1270px;
+    }
+
+    &--callback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__references {
+    width: 100%;
+    background-color: #daecff;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__services {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #daecff;
+  }
+
+  &__slider {
+    @include onMobile {
+      margin-top: 42px;
+    }
+
+    @include onDesktop {
+      margin-top: 123px;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    color: #111;
+
+    &--more-info {
+      @include onMobile {
+        text-align: center;
+      }
+    
+      @include onTablet {
+        text-align: start;
+      }
+    }
+
+    &--mobile {
+      font-size: 23px;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+
+}
+
+.head-info {
+  display: flex;
+
+  @include onMobile {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 125%;
+    color: #484848;
+    width: 837px;
+    margin-top: 171px;
+    margin-bottom: 20px;
+
+    @include onMobile {
+      margin-top: 337px;
+      font-weight: 800;
+      font-size: 27px;
+      line-height: 120%;
+    }
+
+    @include onTablet {
+      margin-top: 171px;
+      text-align: start;
+    }
+  }
+
+  &__info-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 58px;
+    width: 432px;
+
+    @include onMobile {
+      margin-bottom: 34px;
+    }
+
+    @include onTablet {
+      margin-bottom: 58n px;
+    }
+  }
+}
+
+.background-images {
+  &__cart {
+    position: absolute;
+    left: 619px;
+    top: 111px;
+    transition: all 0.3s;
+
+    @include onMobile {
+      width: 309px;
+      height: 304px;
+      top: 80px;
+      left: 84px
+    }
+
+    @include onTablet {
+      width: auto;
+      height: auto;
+      left: 619px;
+      top: 111px;
+    }
+  }
+
+  &__blue-cylinder {
+    position: absolute;
+    top: 92px;
+
+    @include onMobile {
+      width: 47px;
+      top: 35px;
+      left: 144px;
+    }
+
+    @include onTablet {
+      top: 92px;
+      width: auto;
+    }
+  }
+
+  &__blue-sphere {
+    position: absolute;
+    top: 120px;
+    left: -83px;
+  }
+}
+
+.filled-blue-elipse {
+  position: absolute;
+  right: 0;
+  top: 82px;
+  z-index: -1;
+
+  @include onMobile {
+    width: 284px;
+    height: 353px;
+  }
+
+  @include onTablet {
+    width: auto;
+    height: auto;
+  }
+}
+
+.elipse {
+  position: absolute;
+  left: 0;
+  top: 542px;
+  z-index: -1;
+
+  @include onMobile {
+    display: none;
+  }
+
+  @include onTablet {
+    display: block;
+  }
+}
+
+.violet-sphere {
+  @include onMobile {
+    position: absolute;
+    left: 425px;
+    top: 371px;
+    z-index: -2;
+  }
+
+  @include onTablet {
+    display: none;
+  }
+
+  &--small {
+    @include onMobile {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: 41px;
+      top: 545px;
+    }
+
+    @include onTablet {
+      display: none;
+    }
+  }
+}
+
+.violet-wave {
+  position: absolute;
+  left: 65px;
+  top: 608px;
+  z-index: -1;
+
+  @include onMobile {
+    left: 0;
+    top: 270px;
+    width: 67px;
+  }
+
+  @include onTablet {
+    width: auto;
+    left: 65px;
+    top: 608px;
+  }
+}
+
+.green-ellipse {
+  @include onMobile {
+    top: 28px;
+    left: 0;
+    position: absolute;
+  }
+
+  @include onTablet {
+    display: none;
+  }
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  @include onMobile {
+    margin-top: 16px;
+  }
+
+  @include onTablet {
+    margin-top: 120px;
+  }
+
+  &__bag {
+    width: 133px;
+    height: 148px;
+    position: absolute;
+    right: -231px;
+    bottom: 92px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &__sphere {
+    @include onMobile {
+      position: absolute;
+      width: 39px;
+      height: 39px;
+      top: 18px;
+      left: -30px;
+    }
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__blue-wave-img {
+    position: absolute;
+    bottom: 47px;
+    right: -190px;
+  }
+
+  &__light-blue-sphere-img {
+    width: 67px;
+    height: 67px;
+    position: absolute;
+    top: 0;
+    left: -114px;
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 84px;
+    transition: all 1s;
+    display: flex;
+
+    @include onMobile {
+      display: none;
+    }
+
+    @include onTablet {
+      display: flex;
+    }
+
+    &--mobile {
+      @include onMobile {
+        display: flex;
+      }
+
+      @include onTablet {
+        display: none;
+      }
+    }
+  }
+
+  &__buttons {
+    align-self: center;
+    display: flex;
+    margin-top: 84px;
+    margin-bottom: 128px;
+
+    @include onMobile {
+      display: none;
+    }
+
+    @include onTablet {
+      align-self: center;
+      display: flex;
+      margin-top: 22px;
+      margin-bottom: 45px;
+    }
+
+  }
+
+  &__mobile-buttons {
+    @include onMobile {
+      width: 100%;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      gap: 107px;
+      margin-top: 84px;
+      margin-bottom: 128px;
+
+    }
+
+    @include onTablet {
+      display: none;
+    }
+
+    &--small {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    border: 2px solid #67aefc;
+    border-radius: 15px;
+    background-color: #fff;
+    transition: all 0.3s;
+    margin-right: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--left-button {
+      background-image: url(../../../public/assets/img/arrow-left.svg);
+
+      &:hover {
+        background-image: url(../../../public/assets/img/white-arrow-left.svg);
+      }
+    }
+
+    &--right-button {
+      background-image: url(../../../public/assets/img/arrow-right.svg);
+
+      &:hover {
+        background-image: url(../../../public/assets/img/white-arrow-right.svg);
+      }
+    }
+
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: #67aefc;
+    }
+  }
+}
+
+.references {
+  position: relative;
+  margin-top: 121px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+
+  &__slice {
+    position: absolute;
+    left: -2px;
+  }
+
+  &--wave {
+    position: absolute;
+    top: 140px;
+    left: -356px;
+  }
+
+  &--big-blue-sphere {
+    position: absolute;
+    right: -248px;
+    bottom: 245px;
+  }
+
+  &__list {
+    margin-top: 51px;
+    margin-bottom: 121px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include onMobile {
+      display: none;
+    }
+
+    @include onTablet {
+      display: flex;
+    }
+
+    &--mobile {
+      @include onMobile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+      }
+
+      @include onTablet {
+        display: none;
+      }
+
+      margin-top: 51px;
+      margin-bottom: 121px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &__sublist--mobile {
+    &--first {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+    &--second {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  &__item {
+    position: relative;
+    height: 447px;
+    width: 563px;
+    background-image: url(./img/two-carts.png);
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    margin-bottom: 38px;
+    margin-right: 33px;
+
+    @include onMobile {
+      width: 100%;
+    }
+    @include onTablet {
+      width: 563px;
+    }
+
+    &--first {
+      background-image: url(./img/two-carts.png);
+    }
+
+    &--second {
+      background-image: url(./img/flowers.png);
+    }
+
+    &--third {
+      background-image: url(./img/hair-dryer.png);
+    }
+
+    &--fourth {
+      background-image: url(./img/cosmetics.png);
+    }
+
+    &--fifth {
+      background-image: url(./img/cake.png);
+    }
+
+    &--sixth {
+      background-image: url(./img/color-palette.png);
+    }
+
+    &:hover {
+      background-color: #67aefc;
+      background-image: none;
+    }
+
+    &:hover>.references__text {
+      opacity: 100;
+    }
+
+    &:hover>.references__slice {
+      opacity: 0;
+    }
+
+    &--title {
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 125%;
+      color: #fff;
+    }
+
+    &--subtitle {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 175%;
+      color: #fff;
+    }
+  }
+}
+
+.more-info {
+  margin-top: 214px;
+  display: flex;
+  flex-direction: column;
+
+  @include onMobile {
+    margin-top: 43px;
+  }
+
+  @include onTablet {
+    margin-top: 214px;
+  }
+
+  &__text {
+    max-width: 670px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #111;
+    margin-top: 53px;
+  }
+
+  &--orders-img {
+    @include onMobile {
+      margin-top: 32px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    @include onTablet {
+      position: absolute;
+      width: 390px;
+      height: 283px;
+      top: 322px;
+      right: 17px;
+    }
+
+    @include onDesktop {
+      width: 690px;
+      height: 483px;
+      top: 135px;
+      right: -160px;
+    }
+  }
+}
+
+.page__body--with-menu {
+  overflow: hidden;
+}
+
+.page__menu {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  height: 100vh;
+  background-color: #67aefc;
+
+  &__ref {
+    display: flex;
+    gap: 5px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  @include onTablet {
+    display: none;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 42px;
+  }
+
+  &__item {
+    position: relative;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__top {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:target {
+    transform: translateX(0);
+  }
+}
